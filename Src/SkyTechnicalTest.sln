@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyTechnicalTest.Api", "Sky
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyTechnicalTest.Api.Tests", "SkyTechnicalTest.Api.Tests\SkyTechnicalTest.Api.Tests.csproj", "{3ED80A4B-0882-4D52-AD3F-851504C4A3BA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{D4F090B8-2E0A-4C0A-B15B-BB9CFE1313C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyTechnicalTest.Domain", "SkyTechnicalTest.Domain\SkyTechnicalTest.Domain.csproj", "{8DB31028-02B0-4146-AC22-9546E5CCD1C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,10 @@ Global
 		{3ED80A4B-0882-4D52-AD3F-851504C4A3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ED80A4B-0882-4D52-AD3F-851504C4A3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ED80A4B-0882-4D52-AD3F-851504C4A3BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB31028-02B0-4146-AC22-9546E5CCD1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB31028-02B0-4146-AC22-9546E5CCD1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB31028-02B0-4146-AC22-9546E5CCD1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB31028-02B0-4146-AC22-9546E5CCD1C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +38,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{22B93659-1A86-4044-953C-53CC331B6708} = {1E469E96-B991-45A5-B06C-8E5F64297BEA}
 		{3ED80A4B-0882-4D52-AD3F-851504C4A3BA} = {1E469E96-B991-45A5-B06C-8E5F64297BEA}
+		{8DB31028-02B0-4146-AC22-9546E5CCD1C4} = {D4F090B8-2E0A-4C0A-B15B-BB9CFE1313C3}
 	EndGlobalSection
 EndGlobal
