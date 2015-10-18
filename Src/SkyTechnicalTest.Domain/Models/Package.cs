@@ -7,5 +7,6 @@ namespace SkyTechnicalTest.Domain.Models
 {
     public class Package
     {
+        public List<Subscription> Subscriptions { get; set; }
     }
 }

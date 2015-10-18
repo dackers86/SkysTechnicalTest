@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8DB31028-02B0-4146-AC22-9546E5CCD1C4}</ProjectGuid>
+    <ProjectGuid>{89816BFD-A18A-4D61-9BAF-B5A520BD5534}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SkyTechnicalTest.Domain</RootNamespace>
-    <AssemblyName>SkyTechnicalTest.Domain</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>SkyTechnicalTest.Services</RootNamespace>
+    <AssemblyName>SkyTechnicalTest.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,8 +30,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentValidation, Version=5.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.5.6.2.0\lib\portable-net40+sl50+wp80+win8+wpa81\FluentValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,16 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IBillingService.cs" />
-    <Compile Include="Models\Bill.cs" />
-    <Compile Include="Models\Call.cs" />
-    <Compile Include="Models\CallCharges.cs" />
-    <Compile Include="Models\Package.cs" />
-    <Compile Include="Models\Period.cs" />
-    <Compile Include="Models\SkyStore.cs" />
-    <Compile Include="Models\Subscription.cs" />
+    <Compile Include="BillingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Statement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkyTechnicalTest.Domain\SkyTechnicalTest.Domain.csproj">
+      <Project>{8db31028-02b0-4146-ac22-9546e5ccd1c4}</Project>
+      <Name>SkyTechnicalTest.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyTechnicalTest.Repository\SkyTechnicalTest.Repository.csproj">
+      <Project>{2d4caf78-a1b1-464c-b2bb-21f60c52ac1f}</Project>
+      <Name>SkyTechnicalTest.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyTechnicalTest.Validation\SkyTechnicalTest.Validation.csproj">
+      <Project>{1952666c-c1f8-4049-ba38-36ade62053e2}</Project>
+      <Name>SkyTechnicalTest.Validation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
