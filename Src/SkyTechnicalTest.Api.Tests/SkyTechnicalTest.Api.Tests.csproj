@@ -86,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SkyTechnicalTest.Api\SkyTechnicalTest.Api.csproj">
-      <Project>{22b93659-1a86-4044-953c-53cc331b6708}</Project>
+      <Project>{1d70bf33-3554-4dd8-a959-ada6bf04fa0a}</Project>
       <Name>SkyTechnicalTest.Api</Name>
     </ProjectReference>
     <ProjectReference Include="..\SkyTechnicalTest.Domain\SkyTechnicalTest.Domain.csproj">

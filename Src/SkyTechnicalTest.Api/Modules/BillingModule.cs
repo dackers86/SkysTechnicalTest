@@ -1,5 +1,6 @@
 ﻿using Nancy;
 using SkyTechnicalTest.Domain;
+using SkyTechnicalTest.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,12 @@ namespace SkyTechnicalTest.Modules
 {
     public class BillingModule : NancyModule
     {
-        public BillingModule() : base("/billing")
+        public BillingModule(IBillingService billingService) : base("/billing")
         {
-            Get["/"] = parameters =>
+            Get["/{id}"] = parameters =>
             {
-                return Response.AsJson(new Bill());
+                Bill result = billingService.Get(parameters.id);
+                return Response.AsJson(result);
             };
         }
     }

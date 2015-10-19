@@ -3,7 +3,6 @@ using NSubstitute;
 using SkyTechnicalTest.Repository;
 using SkyTechnicalTest.Domain;
 using FluentValidation;
-using SkyTechnicalTest.Validation;
 using SkyTechnicalTest.Domain.Models;
 using System.Collections.Generic;
 using System;
@@ -28,14 +27,12 @@ namespace SkyTechnicalTest.Services.Tests
                 Total = 0.00
             };
 
-            var validator = Substitute.For<IValidator<BillValidator>>();
-            validator.Validate(bill).Returns(new ValidationResult { });
 
             var _billingRepository = Substitute.For<IBillingRepository>();
             _billingRepository.Get(id)
                               .Returns(bill);
 
-            var _billingService = new BillingService(_billingRepository, validator);
+            var _billingService = new BillingService(_billingRepository);
 
             // Act
             var actual = _billingService.Get(id);

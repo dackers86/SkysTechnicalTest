@@ -89,10 +89,6 @@
       <Project>{89816bfd-a18a-4d61-9baf-b5a520bd5534}</Project>
       <Name>SkyTechnicalTest.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SkyTechnicalTest.Validation\SkyTechnicalTest.Validation.csproj">
-      <Project>{c9862619-0b4f-45bb-b367-023ec0d7ab80}</Project>
-      <Name>SkyTechnicalTest.Validation</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
