@@ -5,8 +5,9 @@ using System.Text;
 
 namespace SkyTechnicalTest.Domain.Models
 {
-    public class SkyStore
+    public class BuyAndKeep
     {
-        public List<BuyAndKeep> BuyAndKeeps { get; set; }
+        public string Title { get; set; }
+        public double Cost { get; set; }
     }
 }

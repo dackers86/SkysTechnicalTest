@@ -59,13 +59,12 @@
       <Name>SkyTechnicalTest.Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\SkyTechnicalTest.Validation\SkyTechnicalTest.Validation.csproj">
-      <Project>{1952666c-c1f8-4049-ba38-36ade62053e2}</Project>
+      <Project>{c9862619-0b4f-45bb-b367-023ec0d7ab80}</Project>
       <Name>SkyTechnicalTest.Validation</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
