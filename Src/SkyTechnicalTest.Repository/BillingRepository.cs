@@ -5,6 +5,7 @@ using System.Text;
 using SkyTechnicalTest.Domain;
 using System.IO;
 using Newtonsoft.Json;
+using System.Reflection;
 
 namespace SkyTechnicalTest.Repository
 {
@@ -17,7 +18,7 @@ namespace SkyTechnicalTest.Repository
         {
             try
             {
-                using (StreamReader r = new StreamReader(string.Format("{0}/{1}/{2}", AppDomain.CurrentDomain.BaseDirectory,  _dataStore, string.Format("{0}{1}", id, ".json"))))
+                using (StreamReader r = new StreamReader(string.Format("{0}/{1}/{2}", AppDomain.CurrentDomain.BaseDirectory, _dataStore, string.Format("{0}{1}", id, ".json"))))
                 {
                     string json = r.ReadToEnd();
                     _result = JsonConvert.DeserializeObject<Bill>(json);
