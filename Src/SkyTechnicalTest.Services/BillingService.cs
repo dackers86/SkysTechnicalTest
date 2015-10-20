@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using SkyTechnicalTest.Domain;
 using SkyTechnicalTest.Repository;
-using FluentValidation;
 
 namespace SkyTechnicalTest.Services
 {

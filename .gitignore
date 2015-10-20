@@ -42,3 +42,8 @@ Src/Packages
 #Solution
 Src/**/obj
 Src/**/bin
+
+
+#NPM
+Src/**/node_modules
+
