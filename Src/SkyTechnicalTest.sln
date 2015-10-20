@@ -32,6 +32,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyTechnicalTest.Api.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyTechnicalTest.Api", "SkyTechnicalTest.Api\SkyTechnicalTest.Api.csproj", "{1D70BF33-3554-4DD8-A959-ADA6BF04FA0A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{581BAE7C-1FF5-4BC8-A31A-5D6CA3CE6419}"
+	ProjectSection(SolutionItems) = preProject
+		Bill.html = Bill.html
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
