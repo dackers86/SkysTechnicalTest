@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="client/stylesheets/main.css">
     <script src="client/javascripts/vendor/bower_components/angular/angular.js"></script>
     <script src="client/javascripts/angular/services/billingService.js"></script>
     <script src="client/javascripts/angular/controllers/billingCtrl.js"></script>
@@ -12,8 +13,107 @@
 <body ng-app="skyBillingApp">
 	<div ng-controller="billingCtrl">
 
+	<h1>Statement</h1>
 
-		{{ currentBill }}
+	<div class="section group">
+		<div class="col span_1_of_3">
+			Generated: 
+		</div>
+		<div class="col span_1_of_3">
+			{{ currentBill.statement.generated }}
+		</div>
+	</div>
+
+
+	<div class="section group">
+		<div class="col span_1_of_3">
+			Due: 
+		</div>
+		<div class="col span_1_of_3">
+			{{ currentBill.statement.due }}
+		</div>
+	</div>
+
+	<div class="section group">
+		<div class="col span_1_of_3">
+			Period: 
+		</div>
+		<div class="col span_1_of_3">
+			{{ currentBill.statement.period.from }} to {{ currentBill.statement.period.to }}
+		</div>
+	</div>
+
+	<hr />
+
+
+	<h2>Package</h1>
+
+	<div ng-repeat="(key, value) in currentBill.package.subscriptions"> 
+		<div class="section group">
+			<div class="col span_1_of_3">
+				{{value.type}} 
+			</div>
+			<div class="col span_1_of_3">
+				{{value.name}}
+			</div>
+			<div class="col span_1_of_3">
+				£{{value.cost}}
+			</div>
+		</div>
+	</div>
+
+
+	<hr />
+
+	<h2>Call Charges</h1>
+
+	<div ng-repeat="(key, value) in currentBill.callCharges.calls"> 
+		<div class="section group">
+			<div class="col span_1_of_3">
+				{{value.called}} 
+			</div>
+			<div class="col span_1_of_3">
+				{{value.duration}}
+			</div>
+			<div class="col span_1_of_3">
+				£{{value.cost}}
+			</div>
+		</div>
+	</div>
+
+	<hr />
+
+
+	<h2>Sky Store</h1>
+
+	<div ng-repeat="(key, value) in currentBill.buyAndKeeps.calls"> 
+		<div class="section group">
+			<div class="col span_1_of_3">
+				{{value.called}} 
+			</div>
+			<div class="col span_1_of_3">
+				{{value.duration}}
+			</div>
+			<div class="col span_1_of_3">
+				£{{value.cost}}
+			</div>
+		</div>
+	</div>
+
+	<hr />
+
+
+	<hr />
+	<div class="section group">
+		<div class="col span_1_of_3">
+			Total
+		</div>
+		<div class="col span_1_of_3">
+			£{{ currentBill.total }}
+		</div>
+	</div>
+	<hr />
+
 
 	</div>
 </body>

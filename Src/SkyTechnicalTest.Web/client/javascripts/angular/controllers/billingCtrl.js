@@ -3,7 +3,7 @@ controller('billingCtrl', ['$scope', '$filter', 'billingService', function ($sco
 
    $scope.currentBill = null;
     billingService.Get().then(function(response) {
-        $scope.currentBill = response;
+        $scope.currentBill = response.data;
     });
 
 }]);
