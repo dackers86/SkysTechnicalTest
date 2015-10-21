@@ -4,7 +4,7 @@ angular.module('skyBillingApp.services', [])
     this.Get = function() {
         return $http({
             method: 'GET',
-            url: "http://techtest.local/billing/1",
+            url: "http://api.skytechnicaltest.com/billing/1",
             params: '',
             headers: {}
          });
