@@ -15,12 +15,13 @@
 
 	<h1>Statement</h1>
 
+
 	<div class="section group">
 		<div class="col span_1_of_3">
 			Generated: 
-		</div>
+		</div>	
 		<div class="col span_1_of_3">
-			{{ currentBill.statement.generated }}
+			{{ currentBill.statement.generated | date:'dd/MM/yyyy' }}
 		</div>
 	</div>
 
@@ -30,7 +31,7 @@
 			Due: 
 		</div>
 		<div class="col span_1_of_3">
-			{{ currentBill.statement.due }}
+			{{ currentBill.statement.due | date:'dd/MM/yyyy' }}
 		</div>
 	</div>
 
@@ -39,7 +40,7 @@
 			Period: 
 		</div>
 		<div class="col span_1_of_3">
-			{{ currentBill.statement.period.from }} to {{ currentBill.statement.period.to }}
+			{{ currentBill.statement.period.to | date:'dd/MM/yyyy' }} to {{ currentBill.statement.period.from | date:'dd/MM/yyyy' }}
 		</div>
 	</div>
 
