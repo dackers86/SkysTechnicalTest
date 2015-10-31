@@ -44,6 +44,7 @@ Src/**/obj
 Src/**/bin
 
 
-#NPM
+#NPM and Bower
 Src/**/node_modules
+Src/**/client/javascripts/vendor/bower_components
 
