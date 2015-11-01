@@ -4,12 +4,14 @@ controller('billingCtrl', ['$scope', 'billingService', function ($scope, billing
 	$scope.currentBill = null;
 
 	$scope.init = function () {
-		console.log("Starting init");
 		$scope.GetSkyBill();
 	};
 
     $scope.GetSkyBill = function(){
-    	$scope.currentBill = billingService.Get();
+
+    	billingService.Get().then(function(response) {
+        	$scope.currentBill = response.data;
+    	});
 	};
 
     $scope.init();
