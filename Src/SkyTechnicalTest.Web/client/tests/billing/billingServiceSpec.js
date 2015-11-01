@@ -26,7 +26,7 @@ describe('BillingService', function() {
 				}
 			}
 						
-			_httpBackend.whenGET('http://api.skytechnicaltest.com/billing/1')
+			_httpBackend.whenGET('http://safe-plains-5453.herokuapp.com/bill.json')
 			.respond(200, expected);
 
 			_billingService.Get().then(function(data){
@@ -36,5 +36,4 @@ describe('BillingService', function() {
 			_httpBackend.flush();
 
 		});
-	
 });

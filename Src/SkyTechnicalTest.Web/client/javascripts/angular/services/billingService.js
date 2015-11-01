@@ -4,7 +4,7 @@ angular.module('skyBillingApp.services', [])
     this.Get = function() {
         return $http({
             method: 'GET',
-            url: "http://api.skytechnicaltest.com/billing/1",
+            url: "http://safe-plains-5453.herokuapp.com/bill.json",
             params: '',
             headers: {}
          });
