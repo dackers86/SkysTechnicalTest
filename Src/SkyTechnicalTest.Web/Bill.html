@@ -58,7 +58,7 @@
 				{{value.name}}
 			</div>
 			<div class="col span_1_of_3">
-				£{{value.cost}}
+				{{value.cost | currency:'£' }}
 			</div>
 		</div>
 	</div>
@@ -77,7 +77,7 @@
 				{{value.duration}}
 			</div>
 			<div class="col span_1_of_3">
-				£{{value.cost}}
+				{{value.cost | currency:'£' }}
 			</div>
 		</div>
 	</div>
@@ -87,16 +87,29 @@
 
 	<h2>Sky Store</h1>
 
-	<div ng-repeat="(key, value) in currentBill.buyAndKeeps.calls"> 
+	<div ng-repeat="(key, value) in currentBill.skyStore.rentals"> 
 		<div class="section group">
 			<div class="col span_1_of_3">
-				{{value.called}} 
+				{{value.title}} 
 			</div>
 			<div class="col span_1_of_3">
-				{{value.duration}}
+				{{value.cost | currency:'£' }}
+			</div>
+		</div>
+	</div>
+
+	<hr />
+
+
+	<h2>Buy and Keep</h1>
+
+	<div ng-repeat="(key, value) in currentBill.skyStore.buyAndKeep"> 
+		<div class="section group">
+			<div class="col span_1_of_3">
+				{{value.title}} 
 			</div>
 			<div class="col span_1_of_3">
-				£{{value.cost}}
+				{{value.cost | currency:'£' }}
 			</div>
 		</div>
 	</div>
@@ -110,7 +123,7 @@
 			Total
 		</div>
 		<div class="col span_1_of_3">
-			£{{ currentBill.total }}
+			{{currentBill.total | currency:'£' }}
 		</div>
 	</div>
 	<hr />

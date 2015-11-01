@@ -4,20 +4,13 @@ describe('BillingController', function() {
 
 		beforeEach(module('skyBillingApp'));
 
-		beforeEach(function() {
-	        billingService = {
-	            Get: function () {
-	                deferred = $q.defer();
-	                deferred.resolve({data: "SkyBill"});
-	                return deferred.promise;
-	            }
-	        };
-		});
-
 		beforeEach(inject(function ($rootScope, $controller, _billingService_) {
 		  scope = $rootScope.$new();
 		  billingService = _billingService_;
 
+  		  billingService.Get = function(response) {
+			return { data: "SkyBill" };
+		  };
 
 		  $controller('billingCtrl',
                 {$scope: scope, billingService: billingService });
